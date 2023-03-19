@@ -1,32 +1,47 @@
 #include<stdio.h>
 int main(){
-	int n;
-	
+	int N;
+	int r,c ;
+    int sum=0;
+    
     printf("Enter Value:");
-	scanf("%d",&n);
+	scanf("%d",&N);
 
-	int arr[n][n];
-int i,j;	
-	for(i=0; i<n; i++){
-		
-		for(j=0; j<n; j++){
-			
-			printf("Enter elements [%d][%d]:",i,j);
-			scanf("%d",&arr[i][j]);
+	int a[N][N];
 	
+	for(r=0; r<N; r++){
 		
-}}
-	for(i=0; i<n; i++){
-		
-		for(j=0; j<n; j++){
-				printf("%d",arr[i][j]);
-			}
+		for(c=0; c<N; c++){
 			
-			printf("\n");
-			return 0;
+			printf("Enter Value [%d][%d]:",r,c);
+			scanf("%d",&a[r][c]);
+			
 		}
+	}
+for(r=0; r<N; r++){
+		for(c=0; c<N; c++){
+			
+			printf("%d",a[c][c]);
+			
+			if(r==c){
+				sum+=a[c][c];
+				
+			}
+			else{
+				
+				printf("");
+			}
+
 		}
-		
+    
+    printf("\n");
+	
+	}
+	
+		printf("%d",sum);
+	
+}
+
 		
 		
 		
